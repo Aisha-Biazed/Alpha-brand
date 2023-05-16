@@ -3,6 +3,7 @@ const String imagePath = "assets/images";
 
 class ImageAssets {
   static const String splashLogo = "$imagePath/splash_view.png";
+  static const String kLogo = "$imagePath/logo.png";
   static const String signInlogo = "$imagePath/sigin_logo.png";
   static const String video3 = "$imagePath/Video_3.png";
   static const String onBoarding1 = "$imagePath/onBoarding1.png";

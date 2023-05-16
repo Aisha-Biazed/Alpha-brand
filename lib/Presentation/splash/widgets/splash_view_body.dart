@@ -1,3 +1,5 @@
+import 'package:alpha_brand/Presentation/resources/assets_manager.dart';
+import 'package:alpha_brand/Presentation/resources/color_manager.dart';
 import 'package:alpha_brand/core/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -26,13 +28,13 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children:  [
-       Image.asset('assets/images/splash_view.png',),
+       Image.asset(ImageAssets.splashLogo),
      Column(
-       children: const[
-          TextCustom(text:AppStrings.splashViewText1),
+       children:[
+          const TextCustom(text:AppStrings.splashViewText1),
           TextCustom(
            text: AppStrings.splashViewText2,
-           textColor: Color(0xff121314),
+           textColor: ColorManager.dark,
          ),
        ],
      ),
@@ -41,7 +43,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
   void goToNextView() {
     Future.delayed(const Duration(seconds: 3),(){
-      Get.to(()=> WelcomeBody() , transition: Transition.fade);
+      Get.to(()=> const WelcomeBody() , transition: Transition.fade);
     });
   }
 }

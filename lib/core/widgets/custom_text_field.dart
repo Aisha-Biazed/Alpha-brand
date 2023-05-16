@@ -1,4 +1,4 @@
-import 'package:alpha_brand/core/constants.dart';
+import 'package:alpha_brand/Presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,25 +20,25 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.w),
-            borderSide: const BorderSide(
-                color: secondColor
+            borderSide: BorderSide(
+                color: ColorManager.secodnary
             )
 
         ),
         focusedBorder:OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.w),
-            borderSide: const BorderSide(
-                color: secondColor
+            borderSide: BorderSide(
+                color: ColorManager.secodnary
             )
 
         ) ,
         hintText:hintText ,
         filled: true,
-        fillColor: secondColor,
+        fillColor: ColorManager.secodnary,
         border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8.w),
-          borderSide: const BorderSide(
-            color: secondColor
+          borderSide: BorderSide(
+            color: ColorManager.secodnary
           )
 
         )

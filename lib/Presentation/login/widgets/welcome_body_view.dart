@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 
 import '../../resources/assets_manager.dart';
 import '../../resources/strings_manager.dart';
-import '../../../core/constants.dart';
 import '../../../core/widgets/custom_buttons.dart';
 import '../../signIn/sign_in_view.dart';
 class WelcomeBodyView extends StatefulWidget {
@@ -41,8 +40,8 @@ class _WelcomeBodyViewState extends State<WelcomeBodyView> {
             ),
              Padding(
               padding: const EdgeInsets.fromLTRB(34, 10, 33, 20).w,
-              child:  const CustomGeneralButton(text: AppStrings.welcomeBtnText2,
-                btnColor: secondColor,
+              child: CustomGeneralButton(text: AppStrings.welcomeBtnText2,
+                btnColor: ColorManager.secodnary,
                 textColor: Colors.black,
               ),
             ),
