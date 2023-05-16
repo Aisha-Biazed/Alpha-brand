@@ -27,7 +27,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children:  [
+      children:[
        Image.asset(ImageAssets.splashLogo),
      Column(
        children:[

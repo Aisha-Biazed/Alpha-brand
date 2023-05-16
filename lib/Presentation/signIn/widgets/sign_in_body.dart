@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../login/welcome_view.dart';
 import '../../onBoarding/presentaion/on_boarding_view.dart';
+import '../../onBoarding/presentaion/widgets/on_boarding_body.dart';
 import '../../resources/assets_manager.dart';
 import '../../resources/strings_manager.dart';
 
@@ -20,7 +21,7 @@ class SignInPage extends StatelessWidget {
       children: [
         Image.asset(ImageAssets.kLogo,width: 428.73.w ,height: 422.81.h,),
         Padding(
-          padding:  REdgeInsetsDirectional.only(start: 33, end: 33),
+          padding: REdgeInsetsDirectional.only(start: 33, end: 33),
           child: Column(
             children: [
               const Spacer(),
@@ -49,7 +50,7 @@ class SignInPage extends StatelessWidget {
                       textColor: ColorManager.white,
                       btnColor: ColorManager.primary,
                       onTap: (){
-                        Get.to(()=>const OnBoardingView(),transition: Transition.rightToLeft,duration: const Duration(milliseconds: 500));
+                        Get.to(()=>const OnBoardingViewBody(),transition: Transition.rightToLeft,duration: const Duration(milliseconds: 500));
                       },
                     ),
                   ),
@@ -63,7 +64,7 @@ class SignInPage extends StatelessWidget {
                       text:AppStrings.signInText1,
                     textColor: ColorManager.lightGrey,
                   ),
-                  SizedBox(width: 10.w,),
+                  RSizedBox(width: 10.w,),
                   TextCustom(
                     text:AppStrings.signInText2,
                     textColor: ColorManager.primary,

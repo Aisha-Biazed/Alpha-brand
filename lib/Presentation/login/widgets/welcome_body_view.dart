@@ -28,7 +28,8 @@ class _WelcomeBodyViewState extends State<WelcomeBodyView> {
               height: 450,
                 child: Image.asset(ImageAssets.video3)),
              Padding(
-                padding: const EdgeInsets.fromLTRB(34, 10, 33, 20).w,
+                padding: REdgeInsetsDirectional.only(start:34,end:33,top: 10,bottom: 20),
+                //const EdgeInsets.fromLTRB(34, 10, 33, 20).w,
                 child: CustomGeneralButton(
                   onTap: (){
                     Get.to(()=>const SignInView(),transition: Transition.rightToLeft,duration: Duration(milliseconds: 500));
@@ -48,7 +49,7 @@ class _WelcomeBodyViewState extends State<WelcomeBodyView> {
              TextCustom(
                 text: AppStrings.welcomeText3,
               textColor: ColorManager.lightGrey,
-            )
+            ),
           ],
         )
       ),

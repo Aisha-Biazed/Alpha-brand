@@ -1,4 +1,3 @@
-import 'package:alpha_brand/Presentation/onBoarding/presentaion/on_boarding_view.dart';
 import 'package:alpha_brand/Presentation/resources/color_manager.dart';
 import 'package:alpha_brand/Presentation/resources/strings_manager.dart';
 import 'package:alpha_brand/core/widgets/custom_buttons.dart';
@@ -9,6 +8,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../../../core/widgets/custom_dropdown_button.dart';
+import '../../onBoarding/presentaion/widgets/on_boarding_body.dart';
 
 class FiltersBodyView extends StatelessWidget {
   const FiltersBodyView({Key? key}) : super(key: key);
@@ -17,8 +17,8 @@ class FiltersBodyView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
-              'Filters',
+          title: const Text(
+             AppStrings.filtersAppbar,
               textAlign: TextAlign.right
           ),
           // bottom: ,
@@ -29,12 +29,12 @@ class FiltersBodyView extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   color: ColorManager.dark,
-                  borderRadius: BorderRadius.all(Radius.circular(9))
+                  borderRadius: BorderRadius.all(Radius.circular(9.w))
                 ),
                   width: 41.w,
                   height: 51.h,
                   child: IconButton(onPressed: () {
-                    Get.to(()=>const OnBoardingView(),transition: Transition.rightToLeft,duration: const Duration(milliseconds: 500));
+                    Get.to(()=>const OnBoardingViewBody(),transition: Transition.rightToLeft,duration: const Duration(milliseconds: 500));
                   },
                     icon: const Icon(Icons.arrow_back_ios,size: 20,),
                     color: ColorManager.white,)),
@@ -56,15 +56,15 @@ class FiltersBodyView extends StatelessWidget {
             children: [
               TextCustom(text: AppStrings.filtersText,
               textColor: ColorManager.primary,),
-              RSizedBox(height: 20,),
+              const RSizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  CustomDropDown(t1: 'Color', t2: 'priamry', t3: 'dark', hint: 'Color',),
-                  CustomDropDown(t1: 'Brand', t2: 'icecup', t3: 'Shadwos', hint: 'Brand',),
+                  CustomDropDown(t1: 'Color', t2: 'primary', t3: 'dark', hint: 'Color',),
+                  CustomDropDown(t1: 'Brand', t2: 'ice_cup', t3: 'Shadows', hint: 'Brand',),
                 ],
               ),
-            RSizedBox(
+            const RSizedBox(
               height: 30,
             ),
               Row(
@@ -74,11 +74,12 @@ class FiltersBodyView extends StatelessWidget {
                   CustomDropDown(t1: 'Size', t2: 'large', t3: 'small', hint: 'Size',),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               CustomGeneralButton(text: AppStrings.filtersBtn,
               textColor: ColorManager.white,
               btnColor: ColorManager.primary,
-              )
+              ),
+              77.verticalSpace
             ],
           ),
         )

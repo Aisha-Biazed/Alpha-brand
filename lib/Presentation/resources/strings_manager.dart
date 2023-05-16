@@ -29,8 +29,12 @@ class AppStrings{
   static const onBoardingListViewsubTxt1 = "254.000 SYP";
   static const onBoardingListViewsubTxt = "Zara";
   static const filtersText = 'Delete';
+  static const filtersAppbar = 'Filters';
   static const filtersBtn = 'Search';
-//Pull&Bear
+  static const filtersBtn1 = 'Contact us';
+  static const filtersBtn2= 'Add to cart';
+//
 
-//Creamy basic Hoodie
+  //
+
 }
