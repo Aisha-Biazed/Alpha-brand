@@ -14,13 +14,9 @@ class ImageAssets {
   static const String onboardingIcon4 = "$imagePath/onboardingIcon4.png";
   static const String onboardingIcon5 = "$imagePath/onboardingIcon5.png";
   static const String imglistview1 = "$imagePath/imglistview1.png";
-  //
-  //imglistview1
+  // Checkout Page
+  static const String catImg_1 = "$imagePath/cart_img1.png";
+  static const String catImg_2 = "$imagePath/cart_img2.png";
+  static const String catImg_3 = "$imagePath/cart_img3.png";
 }
 
-// class JsonAssets {
-//   static const String loading = "$jsonPath/loading.json";
-//   static const String error = "$jsonPath/error.json";
-//   static const String empty = "$jsonPath/empty.json";
-//   static const String success = "$jsonPath/success.json";
-// }
