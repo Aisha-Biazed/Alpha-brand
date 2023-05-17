@@ -5,8 +5,8 @@ import 'package:alpha_brand/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+
 import '../../login/welcome_view.dart';
-import '../../onBoarding/presentaion/on_boarding_view.dart';
 import '../../onBoarding/presentaion/widgets/on_boarding_body.dart';
 import '../../resources/assets_manager.dart';
 import '../../resources/strings_manager.dart';
@@ -43,7 +43,8 @@ class SignInPage extends StatelessWidget {
                       },
                     ),
                   ),
-                  const RSizedBox(width:10 ,),//todo
+                  10.horizontalSpace,
+                  // const RSizedBox(width:10 ,),//todo
                    Flexible(
                     flex: 3,
                     child: CustomGeneralButton(text:AppStrings.signInBtnText1,
@@ -56,7 +57,8 @@ class SignInPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 16.h,),
+              // SizedBox(height: 16.h,),
+              16.verticalSpace,
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -64,7 +66,8 @@ class SignInPage extends StatelessWidget {
                       text:AppStrings.signInText1,
                     textColor: ColorManager.lightGrey,
                   ),
-                  RSizedBox(width: 10.w,),
+                  // RSizedBox(width: 10.w,),
+                  10.horizontalSpace,
                   TextCustom(
                     text:AppStrings.signInText2,
                     textColor: ColorManager.primary,

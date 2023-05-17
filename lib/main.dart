@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
+import 'Presentation/resources/color_manager.dart';
 import 'Presentation/splash/splash_view.dart';
 
 void main() {
@@ -11,7 +12,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -20,12 +20,11 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder:(context,child){
         return GetMaterialApp(
-            theme: ThemeData(fontFamily: 'Poppins'),
+            theme: ThemeData(fontFamily: 'Poppins',scaffoldBackgroundColor: ColorManager.white,),
             debugShowCheckedModeBanner: false,
             home:  const SplashView()
         );
       }
-
     );
   }
 }
