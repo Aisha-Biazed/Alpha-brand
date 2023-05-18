@@ -1,9 +1,8 @@
-import 'package:alpha_brand/Presentation/Filters/filters_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import '../../../../core/widgets/custom_buttons.dart';
 import '../../../resources/color_manager.dart';
+import '../../../resources/routes_manager.dart';
 import '../../../resources/strings_manager.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
@@ -43,9 +42,7 @@ class CustomBottomNavigation extends StatelessWidget {
               btnColor: ColorManager.primary,
               textColor: ColorManager.white,
               onTap: () {
-                Get.to(() => const FiltersView(),
-                    transition: Transition.rightToLeft,
-                    duration: const Duration(milliseconds: 500));
+                Navigator.pushNamed(context, Routes.filtersRoute);
               },
             ))
           ],

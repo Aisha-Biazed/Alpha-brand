@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../core/widgets/custom_text.dart';
 import '../../resources/assets_manager.dart';
 import '../../resources/color_manager.dart';
+import '../../resources/strings_manager.dart';
 class CardItem extends StatelessWidget {
   const CardItem({Key? key}) : super(key: key);
 
@@ -32,9 +34,33 @@ class CardItem extends StatelessWidget {
           ),
           20.horizontalSpace,
           Column(
-            children: const [
+            children:  [
               Text('Creamy basic Hoodie'),
               Text('Black - Large'),
+              10.verticalSpace,
+              RSizedBox(
+                width: 150,
+                height: 41,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: ColorManager.secodnary,
+                    borderRadius: BorderRadius.circular(12)
+                  ),
+                  padding: REdgeInsetsDirectional.only(start: 20, end: 10),
+                  child: Row(
+                    children: [
+                      TextCustom(
+                        text: AppStrings.onBoardingBtn1,
+                        textColor: ColorManager.primary,
+                      ),
+                      10.horizontalSpace,
+                      TextCustom(
+                          text: AppStrings.onBoardingBtn1_2,
+                          textColor: ColorManager.dark),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
           80.horizontalSpace,

@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../resources/assets_manager.dart';
+import '../../resources/routes_manager.dart';
 import '../../resources/strings_manager.dart';
 import '../../../core/widgets/custom_buttons.dart';
 import '../../signIn/sign_in_view.dart';
@@ -32,7 +33,9 @@ class _WelcomeBodyViewState extends State<WelcomeBodyView> {
                 //const EdgeInsets.fromLTRB(34, 10, 33, 20).w,
                 child: CustomGeneralButton(
                   onTap: (){
-                    Get.to(()=>const SignInView(),transition: Transition.rightToLeft,duration: Duration(milliseconds: 500));
+                    // Get.to(()=>const SignInView(),transition: Transition.rightToLeft,duration: Duration(milliseconds: 500));
+                    Navigator.pushNamed(
+                        context, Routes.signInRote);
                   },
                   text:AppStrings.welcomeBtnText1,
                   textColor: Colors.white,

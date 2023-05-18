@@ -33,6 +33,7 @@ class AppStrings{
   static const filtersBtn = 'Search';
   static const filtersBtn1 = 'Contact us';
   static const filtersBtn2= 'Add to cart';
+  static const notFound= 'not Found';
 //
 
   //

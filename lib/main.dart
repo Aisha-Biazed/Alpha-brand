@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
-import 'Presentation/checkout/widgets/cart_body_view.dart';
 import 'Presentation/resources/color_manager.dart';
+import 'Presentation/resources/routes_manager.dart';
 import 'Presentation/splash/splash_view.dart';
 
 void main() {
@@ -16,18 +16,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(428, 926),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder:(context,child){
-        return GetMaterialApp(
-            theme: ThemeData(fontFamily: 'Poppins',scaffoldBackgroundColor: ColorManager.white,),
+        designSize: const Size(428, 926),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return GetMaterialApp(
+            theme: ThemeData(
+              fontFamily: 'Poppins',
+              scaffoldBackgroundColor: ColorManager.white,
+            ),
             debugShowCheckedModeBanner: false,
-            home:  const CartBodyView()
-        );
-      }
-    );
+            // home:  const CartBodyView(),
+            onGenerateRoute: RouteGenerator.getRoute,
+            initialRoute: Routes.splashRoute,
+          );
+        });
   }
 }
-
-

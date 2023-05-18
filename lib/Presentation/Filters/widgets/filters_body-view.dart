@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/widgets/custom_dropdown_button.dart';
 import '../../../core/widgets/custom_appbar.dart';
+import '../../resources/routes_manager.dart';
 
 class FiltersBodyView extends StatelessWidget {
   const FiltersBodyView({Key? key}) : super(key: key);
@@ -43,6 +44,9 @@ class FiltersBodyView extends StatelessWidget {
               CustomGeneralButton(text: AppStrings.filtersBtn,
               textColor: ColorManager.white,
               btnColor: ColorManager.primary,
+                onTap: (){
+                Navigator.pushNamed(context, Routes.cartRoute);
+                },
               ),
               77.verticalSpace
             ],

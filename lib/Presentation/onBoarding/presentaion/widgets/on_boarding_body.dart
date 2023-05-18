@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/get_core.dart';
+import '../../../resources/routes_manager.dart';
+import '../../../signIn/sign_in_view.dart';
 import '../../../signIn/sign_in_view.dart';
 import 'custom_bottomNavigation.dart';
 import 'custom_indicator.dart';
@@ -64,9 +66,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                       height: 51.h,
                       child: IconButton(
                         onPressed: () {
-                          Get.to(() => const SignInView(),
-                              transition: Transition.rightToLeft,
-                              duration: const Duration(milliseconds: 500));
+                          Navigator.pushNamed(context, Routes.signInRote);
                         },
                         icon: const Icon(
                           Icons.arrow_back_ios,
@@ -139,8 +139,11 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                     width: 150,
                     height: 41,
                     child: Container(
+                      decoration: BoxDecoration(
+                          color: ColorManager.secodnary,
+                          borderRadius: BorderRadius.circular(12)
+                      ),
                       padding: REdgeInsetsDirectional.only(start: 20, end: 10),
-                      color: ColorManager.secodnary,
                       child: Row(
                         children: [
                           TextCustom(

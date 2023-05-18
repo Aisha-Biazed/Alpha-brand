@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import '../../login/welcome_view.dart';
 import '../../onBoarding/presentaion/widgets/on_boarding_body.dart';
 import '../../resources/assets_manager.dart';
+import '../../resources/routes_manager.dart';
 import '../../resources/strings_manager.dart';
 
 class SignInPage extends StatelessWidget {
@@ -39,7 +40,7 @@ class SignInPage extends StatelessWidget {
                       iconData: Icons.arrow_back_ios,
                       color: ColorManager.primary,
                       onTap: (){
-                        Get.to(()=>const WelcomeBody(),transition: Transition.rightToLeft,duration: const Duration(milliseconds: 500));
+                      Navigator.pushNamed(context, Routes.loginRoute);
                       },
                     ),
                   ),
@@ -51,7 +52,8 @@ class SignInPage extends StatelessWidget {
                       textColor: ColorManager.white,
                       btnColor: ColorManager.primary,
                       onTap: (){
-                        Get.to(()=>const OnBoardingViewBody(),transition: Transition.rightToLeft,duration: const Duration(milliseconds: 500));
+                        Navigator.pushNamed(
+                            context, Routes.onBoardingRote);
                       },
                     ),
                   ),
