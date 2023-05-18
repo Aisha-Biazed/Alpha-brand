@@ -4,8 +4,12 @@ import 'package:alpha_brand/core/widgets/custom_buttons.dart';
 import 'package:alpha_brand/core/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/routes/transitions_type.dart';
+import '../../../core/widgets/custom_appbar_cart.dart';
 import '../../../core/widgets/custom_dropdown_button.dart';
-import '../../../core/widgets/custom_appbar.dart';
+import '../../onBoarding/presentaion/widgets/on_boarding_body.dart';
 import '../../resources/routes_manager.dart';
 
 class FiltersBodyView extends StatelessWidget {
@@ -14,7 +18,23 @@ class FiltersBodyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomAppBar(AppStrings.filtersAppbar),
+        appBar: CustomAppBar(AppStrings.filtersAppbar,[
+          Padding(
+            padding:  REdgeInsetsDirectional.only(top: 43, bottom: 13,end: 21),
+            child: Container(
+                decoration: BoxDecoration(
+                    color: ColorManager.dark,
+                    borderRadius: BorderRadius.all(Radius.circular(9.w))
+                ),
+                width: 41.w,
+                height: 51.h,
+                child: IconButton(onPressed: () {
+                  Get.to(()=>const OnBoardingViewBody(),transition: Transition.rightToLeft,duration: const Duration(milliseconds: 500));
+                },
+                  icon: const Icon(Icons.arrow_back_ios,size: 20,),
+                  color: ColorManager.white,)),
+          )
+        ],),
         body: Padding(
           padding: const EdgeInsets.all(31.0),
           child: Column(

@@ -6,8 +6,8 @@ import '../../resources/assets_manager.dart';
 import '../../resources/color_manager.dart';
 import '../../resources/strings_manager.dart';
 class CardItem extends StatelessWidget {
-  const CardItem({Key? key}) : super(key: key);
-
+  const CardItem({Key? key, required this.img}) : super(key: key);
+final String img;
   @override
   Widget build(BuildContext context) {
     return   Card(
@@ -26,7 +26,7 @@ class CardItem extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16),
                         // color: Colors.red,
                         image:  DecorationImage(
-                            image: AssetImage(ImageAssets.catImg_2))),
+                            image: AssetImage(img))),
                   ),
                 ),
               ],
@@ -64,7 +64,15 @@ class CardItem extends StatelessWidget {
             ],
           ),
           80.horizontalSpace,
-          Icon(Icons.restore_from_trash_outlined ,color: ColorManager.primary,)
+          Container(
+            margin: REdgeInsetsDirectional.only(bottom: 70, top: 0),
+            height: 30.h,
+            width: 30.w,
+            decoration: BoxDecoration(
+              color: ColorManager.secodnary,
+              borderRadius: BorderRadius.circular(8)
+            ),
+              child: Icon(Icons.restore_from_trash_outlined ,color: ColorManager.primary,)),
         ],
       ),
     );

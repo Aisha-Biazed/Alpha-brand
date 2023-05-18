@@ -6,8 +6,6 @@ import 'package:alpha_brand/Presentation/signIn/sign_in_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../Cart/cart_view.dart';
-
-import '../login/widgets/welcome_body_view.dart';
 import '../splash/splash_view.dart';
 
 class Routes {

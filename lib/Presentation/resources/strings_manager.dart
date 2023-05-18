@@ -34,7 +34,11 @@ class AppStrings{
   static const filtersBtn1 = 'Contact us';
   static const filtersBtn2= 'Add to cart';
   static const notFound= 'not Found';
-//
+  static const Purchases= 'Purchases';
+  static const totalPrice= 'Total Price';
+  static const numberCartbtn= '2.250.500   SYP';
+  static const checkout= 'Check out';
+//2.250.500
 
   //
 
