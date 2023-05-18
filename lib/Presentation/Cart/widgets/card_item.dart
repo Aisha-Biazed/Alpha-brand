@@ -66,10 +66,10 @@ final String img;
           80.horizontalSpace,
           Container(
             margin: REdgeInsetsDirectional.only(bottom: 70, top: 0),
-            height: 30.h,
-            width: 30.w,
+            height: 35.h,
+            width: 35.w,
             decoration: BoxDecoration(
-              color: ColorManager.secodnary,
+              color: ColorManager.primary.withOpacity(0.1),
               borderRadius: BorderRadius.circular(8)
             ),
               child: Icon(Icons.restore_from_trash_outlined ,color: ColorManager.primary,)),
