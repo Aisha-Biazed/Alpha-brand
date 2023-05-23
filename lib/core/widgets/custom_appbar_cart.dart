@@ -5,6 +5,7 @@ import '../../Presentation/resources/color_manager.dart';
 
 AppBar CustomAppBar(String title, List<Widget>? action) => AppBar(
       title: Text(title, textAlign: TextAlign.right),
+
       // bottom: ,
       backgroundColor: ColorManager.primary,
       actions: action,

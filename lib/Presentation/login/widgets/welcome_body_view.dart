@@ -47,6 +47,9 @@ class _WelcomeBodyViewState extends State<WelcomeBodyView> {
               child: CustomGeneralButton(text: AppStrings.welcomeBtnText2,
                 btnColor: ColorManager.secodnary,
                 textColor: Colors.black,
+                onTap: (){
+                Navigator.pushNamed(context, Routes.signUpRoute);
+                },
               ),
             ),
              TextCustom(

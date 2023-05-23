@@ -5,6 +5,8 @@ class ImageAssets {
   static const String splashLogo = "$imagePath/splash_view.png";
   static const String kLogo = "$imagePath/logo.png";
   static const String signInlogo = "$imagePath/sigin_logo.png";
+  static const String signUplogo = "$imagePath/signup.png";
+  static const String address = "$imagePath/address.png";
   static const String video3 = "$imagePath/Video_3.png";
   static const String onBoarding1 = "$imagePath/onBoarding1.png";
   static const String onBoarding2 = "$imagePath/onBoarding2.png";

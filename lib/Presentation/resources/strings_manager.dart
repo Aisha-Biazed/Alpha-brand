@@ -6,10 +6,22 @@ class AppStrings{
   static const welcomeText3 = "Continue as a guest";
   static const signInInputHintText1 = "User Name";
   static const signInInputHintText2 = "Password";
+  static const signUptHintText1 = "First Name";
+  static const signUpHintText2 = "Last Name";
+  static const signUpHintText3 = "Phone Number";
+  static const signUpHintText4 = "Password";
+  static const signUpHintText5 = "Confirm Password";
   static const signInBtnText1 = "Next";
   static const signInText1 = "Don\'t have account ?";
   static const signInText2 = "Signup";
-  //onBoarding Screens
+  static const loginText = "Login";
+  static const signUpText = "Already have an account ?";
+  static const signUpCode = "Syria";
+  static const addressText1 = "City";
+  static const addressText2 = "Address";
+  static const addressText3 = "Street";
+
+  //
   static const onBoardingSubTitle1 = "Creamy basic Hoodie";
   static const onBoardingSubTitle2 = "Information you should know";
   static const onBoardingSubTitle3 = "You may also like";

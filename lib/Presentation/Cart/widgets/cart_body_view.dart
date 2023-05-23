@@ -14,6 +14,7 @@ class CartBodyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: CustomAppBar(
         'Cart',
         [
@@ -41,6 +42,7 @@ class CartBodyView extends StatelessWidget {
           )
         ],
       ),
+
       body: Padding(
           padding: REdgeInsetsDirectional.only(start: 21, top: 26),
           child: ListView(

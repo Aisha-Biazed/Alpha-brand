@@ -5,6 +5,7 @@ import 'package:alpha_brand/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
 import '../../login/welcome_view.dart';
 import '../../onBoarding/presentaion/widgets/on_boarding_body.dart';
@@ -20,7 +21,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset(ImageAssets.kLogo,width: 428.73.w ,height: 422.81.h,),
+        Image.asset(ImageAssets.kLogo,),
         Padding(
           padding: REdgeInsetsDirectional.only(start: 33, end: 33),
           child: Column(
@@ -29,8 +30,9 @@ class SignInPage extends StatelessWidget {
               Image.asset(ImageAssets.signInlogo,height:55.87.h ,width: 168.63.w),
               const Spacer(),
               const CustomTextFormField(hintText: AppStrings.signInInputHintText1),
-              SizedBox(height: 18.h,),// todo 18.verticalspace
-              const CustomTextFormField(hintText: AppStrings.signInInputHintText2),
+              18.verticalSpace,
+               CustomTextFormField(hintText: AppStrings.signInInputHintText2,suffexIcon: Icon(Icons.remove_red_eye_outlined, color: ColorManager.lightGrey)
+              ),
               const Spacer(),
               Row(
                 children:   [
@@ -70,9 +72,14 @@ class SignInPage extends StatelessWidget {
                   ),
                   // RSizedBox(width: 10.w,),
                   10.horizontalSpace,
-                  TextCustom(
-                    text:AppStrings.signInText2,
-                    textColor: ColorManager.primary,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, Routes.signUpRoute);
+                    },
+                    child: TextCustom(
+                      text:AppStrings.signInText2,
+                      textColor: ColorManager.primary,
+                    ),
                   )
                 ],
               ),

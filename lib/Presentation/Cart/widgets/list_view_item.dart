@@ -21,9 +21,6 @@ class CartListView extends StatelessWidget {
                       image: AssetImage(ImageAssets.catImg_1))),
             ),
           ),
-          Column(
-            children: [],
-          )
         ],
       ),
     );

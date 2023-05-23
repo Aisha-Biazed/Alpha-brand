@@ -1,0 +1,1 @@
+const loginEndpoints ='/api/Account/SetUser';

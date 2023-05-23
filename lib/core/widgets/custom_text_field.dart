@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({Key? key,  this.inputType, this.suffexIcon, this.onSaved, this.onChanged, this.maxLines, required this.hintText}) : super(key: key);
+  const CustomTextFormField({Key? key,  this.inputType, this.suffexIcon, this.onSaved, this.onChanged, this.maxLines, required this.hintText, this.color}) : super(key: key);
   final TextInputType? inputType;
   final Widget? suffexIcon;
   final ValueSetter? onSaved;
   final ValueSetter? onChanged;
   final int? maxLines;
   final String hintText;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -18,6 +19,10 @@ class CustomTextFormField extends StatelessWidget {
       onSaved: onSaved,
       maxLines: maxLines,
       decoration: InputDecoration(
+        hintStyle: TextStyle(
+          color: color
+        ),
+        suffixIcon: suffexIcon,
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.w),
             borderSide: BorderSide(
@@ -32,7 +37,7 @@ class CustomTextFormField extends StatelessWidget {
             )
 
         ) ,
-        hintText:hintText ,
+        hintText:hintText,
         filled: true,
         fillColor: ColorManager.secodnary,
         border: OutlineInputBorder(
